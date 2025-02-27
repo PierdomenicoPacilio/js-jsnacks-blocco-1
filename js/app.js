@@ -32,3 +32,17 @@ if (firstWord.length > secondWord.length){
 } else{
     console.log(`le parole "${firstWord}" e "${secondWord}" hanno la stessa lunghezza`);
 }
+
+// jsnack3
+// Il software deve chiedere per 10 volte all’utente di inserire un numero.
+// Il programma stampa la somma di tutti i numeri inseriti.
+let sumNum = 0;
+for(i = 0; i < 10; i++){
+    const currentNum = Number(prompt(`inserisci il ${i}° numero`));
+    if(isNaN(currentNum)){
+        console.log('dati inseriti non validi');
+        break
+    };
+    sumNum = sumNum + currentNum
+}
+console.log(`la somma dei numeri è ${sumNum}`);
