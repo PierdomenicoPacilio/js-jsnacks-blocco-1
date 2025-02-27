@@ -24,14 +24,14 @@ const firstWord = prompt('Inserisci la prima parola.');
 const secondWord = prompt('Inserisci la seconda parola.');
 let currentWord;
 if (firstWord.length > secondWord.length){
-    currentWord = firstWord
+    currentWord = firstWord;
     console.log(`la parola più lunga è ${currentWord}`);
 } else if (firstWord.length < secondWord.length){
-    currentWord = secondWord
+    currentWord = secondWord;
     console.log(`la parola più lunga è ${currentWord}`);
 } else{
     console.log(`le parole "${firstWord}" e "${secondWord}" hanno la stessa lunghezza`);
-}
+};
 
 // jsnack3
 // Il software deve chiedere per 10 volte all’utente di inserire un numero.
@@ -46,3 +46,17 @@ for(i = 0; i < 10; i++){
     sumNum = sumNum + currentNum
 }
 console.log(`la somma dei numeri è ${sumNum}`);
+
+// jsnack4
+// Crea un array vuoto.
+// Chiedi per 6 volte all’utente di inserire un numero,
+// se è dispari inseriscilo nell’array
+
+const array = [];
+for (i= 0; i < 6; i++){
+    const currentNum = Number(prompt(`inserisci il ${i}° numero`));
+    if(currentNum % 2 !== 0){
+        array.push(currentNum);
+    };      
+};
+console.log(array);
